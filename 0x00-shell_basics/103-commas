@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -1p | sed -e '1,2d' -e 's/\(.*\)\/$/\1\/,/' -e '/^\([[:alnum:]]\)/!d' | LC_ALL=C sort -df | tr '\n' ',' ; echo
